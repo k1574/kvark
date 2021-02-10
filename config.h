@@ -36,4 +36,7 @@ static const struct {
 	{ "webm",  "video/webm" },
 };
 
+#define DIRLISTING_HEAD "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"\
+	"<link rel=\"shortcut icon\" href=\"/img/favicon.png\" type=\"image/x-icon\" >"
+
 #endif /* CONFIG_H */

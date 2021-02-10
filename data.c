@@ -112,10 +112,11 @@ data_prepare_dirlisting_buf(const struct response *res,
 		/* write listing header (sizeof(esc) >= PATH_MAX) */
 		html_escape(res->uri, esc, MIN(PATH_MAX, sizeof(esc)));
 		if (buffer_appendf(buf,
-		                   "<!DOCTYPE html>\n<html>\n\t<head>"
-		                   "<title>Index of %s</title></head>\n"
-		                   "\t<body>\n\t\t<a href=\"..\">..</a>",
-		                   esc) < 0) {
+				"<!DOCTYPE html>\n<html>\n\t<head>"
+				DIRLISTING_HEAD
+				"<title>Index of %s</title></head>\n"
+				"\t<body>\n\t\t<a href=\"..\">..</a>",
+				esc) < 0) {
 			s = S_REQUEST_TIMEOUT;
 			goto cleanup;
 		}
