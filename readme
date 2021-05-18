@@ -1,5 +1,4 @@
-httpd
-=====
+# kvark
 
-httpd - HTTP daemon.
+kvark - HTTP server for static files.
 

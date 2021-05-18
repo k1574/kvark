@@ -1,5 +1,5 @@
 <$HOME/app/mk/inc/config
-PROGNAME = httpd
+PROGNAME = kvark
 VERSION = 0.1
 DEFS = \
 	-DVERSION=\"$VERSION\"\
